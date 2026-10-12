@@ -47,8 +47,38 @@ footer{background:#0b0908;border-top:3px solid #ad3b2e}
 .gallery-image{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#15110e;border:2px solid #705144}
 @media(max-width:720px){.hero{background-position:60% center}.hero-logo{max-height:210px}.art-panel{grid-template-columns:1fr}.original-art{height:200px}}
 @media(prefers-reduced-motion:reduce){.hero-logo{animation:none}}
-.atlas-logo{height:auto;aspect-ratio:939/703;max-height:330px;object-fit:contain}.atlas-gallery{height:auto;aspect-ratio:939/703;max-height:270px;object-fit:contain}.hero{min-height:680px}@media(max-width:720px){.atlas-logo{max-height:230px}.hero{min-height:550px}}</style></head><body>
-<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="#top">SNS / ROOKIES <span style="color:var(--accent)">iOS</span></a><div class="links"><a href="#about">About</a><a href="#songs">Songs</a><a href="#gallery">Gallery</a><a href="#downloads">Downloads</a><a href="#artwork">Artwork</a><a href="#credits">Credits</a></div></nav></header>
+.atlas-logo{height:auto;aspect-ratio:939/703;max-height:330px;object-fit:contain}.atlas-gallery{height:auto;aspect-ratio:939/703;max-height:270px;object-fit:contain}.hero{min-height:680px}@media(max-width:720px){.atlas-logo{max-height:230px}.hero{min-height:550px}}
+/* Mobile usability overhaul */
+header nav{flex-wrap:nowrap;min-height:62px}
+nav .brand{flex-shrink:0;white-space:nowrap}
+nav .links{gap:1rem;justify-content:flex-end}
+.mobile-menu-toggle{display:none;border:1px solid #a65c47;color:#fff1db;background:#261914;padding:.55rem .8rem;font:800 .9rem system-ui,sans-serif;cursor:pointer}
+.hero{min-height:0;padding:4.5rem 0 4rem;gap:.15rem}
+.hero-logo{width:min(850px,100%);max-height:360px;aspect-ratio:auto;object-fit:contain;object-position:center}
+.hero h1{margin:.35rem 0 .3rem}
+.hero .lead{margin:.45rem 0 .65rem}
+.hero .actions{margin-top:1.15rem}
+.hero .status{margin-top:.45rem}
+@media(max-width:720px){
+header nav{position:relative;min-height:60px;padding:.55rem 0;flex-wrap:nowrap}
+nav .brand{font-size:1rem;letter-spacing:.05em}
+.mobile-menu-toggle{display:block;margin-left:auto}
+nav .links{display:none;position:absolute;top:calc(100% + 2px);left:0;right:0;background:#140e0dec;border:2px solid #863b2c;padding:1rem;z-index:20;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 12px 22px #000a}
+nav .links.open{display:flex}
+nav .links a{display:block;padding:.7rem .6rem;border-bottom:1px solid #6c3b30}
+.hero{min-height:0;padding:1.5rem 0 2.5rem;background-position:55% center}
+.hero-logo{width:100%;max-height:230px;aspect-ratio:1.6;object-fit:contain;object-position:center;filter:drop-shadow(3px 5px 0 #080607)}
+.hero h1{font-size:clamp(1.7rem,7vw,2.4rem);margin:.15rem 0 .35rem}
+.hero .eyebrow{font-size:.7rem;letter-spacing:.1em}
+.hero .lead{font-size:1.03rem;line-height:1.42;margin:.35rem 0 .6rem}
+.hero .stamp{font-size:.65rem;padding:.35rem .5rem;margin-bottom:.6rem}
+.hero .status{font-size:.72rem}
+.hero .actions{display:grid;grid-template-columns:1fr;gap:.7rem;width:100%;margin-top:1rem}
+.hero .actions .button{display:block;text-align:center;padding:.7rem 1rem}
+section{padding:3rem 0}
+}
+</style></head><body>
+<header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="#top">SNS / ROOKIES <span style="color:var(--accent)">iOS</span></a><button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="site-links" aria-label="Toggle navigation">☰ Menu</button><div class="links" id="site-links"><a href="#about">About</a><a href="#songs">Songs</a><a href="#gallery">Gallery</a><a href="#downloads">Downloads</a><a href="#artwork">Artwork</a><a href="#credits">Credits</a></div></nav></header>
 <main id="top"><div class="wrap hero"><div class="eyebrow"><span class="stamp">PROJECT ARCHIVE // MOBILE RECONSTRUCTION</span><br>Rookies Edition V1 · iPhone project</div><canvas class="hero-logo atlas-logo" id="sns-title-animation" width="939" height="703" role="img" aria-label="Original animated Sunday Night Suicide title logo"></canvas><noscript><img class="hero-logo" src="./logo-sns.webp" alt="Original Sunday Night Suicide logo"></noscript><h1>ROOKIES EDITION <span>V1 · iOS</span></h1><p class="lead">ROOKIES EDITION V1 — bringing the original mod's music, atmosphere and gameplay to iPhone.</p><span class="status">iOS port in development · release status below</span><div class="actions"><a class="button" href="#downloads">View iOS releases ↓</a><a class="button secondary" href="#gallery">Explore the port</a></div></div><div class="marquee" aria-hidden="true"><span>▶ INSERT TAPE 1 &nbsp; ★ MELANCHOLY &nbsp; ★ TWISTED &nbsp; ★ LUNACY &nbsp; ✦ SMILE &nbsp; ▶ INSERT TAPE 1 &nbsp; ★ MELANCHOLY &nbsp; ★ TWISTED &nbsp; ★ LUNACY &nbsp; ✦ SMILE &nbsp; ▶ INSERT TAPE 1 &nbsp; ★ MELANCHOLY &nbsp; ★ TWISTED &nbsp; ★ LUNACY &nbsp; ✦ SMILE</span></div>
 <section id="about"><div class="wrap"><div class="eyebrow">The project</div><h2>THE ORIGINAL ATMOSPHERE. ON iOS.</h2><p>Built around the original mod's artwork, charts, audio, cinematic moments and custom effects. This port adapts the experience for touchscreen play while working toward faithful PC-style presentation.</p><div class="art-panel"><figure><img class="original-art logo" src="./logo.webp" alt="Original logo artwork" loading="lazy"><figcaption>Original logo artwork</figcaption></figure><figure><img class="original-art" src="./Menu_Sunny.webp" alt="Sunny menu character sprite artwork" loading="lazy"><figcaption>Sunny — original menu sprite</figcaption></figure><figure><img class="original-art" src="./week1.webp" alt="Original TAPE 1 Story Mode artwork" loading="lazy"><figcaption>TAPE 1 — Story Mode artwork</figcaption></figure></div><div class="grid"><article class="card"><h3>Original content</h3><p>Mod assets, charts, music and visual identity integrated into the mobile project.</p></article><article class="card"><h3>Touch-first gameplay</h3><p>iPhone controls and menu interactions designed for landscape play.</p></article><article class="card"><h3>Ongoing reconstruction</h3><p>Title animations, Story Mode presentation and song-specific effects continue to be refined.</p></article></div></div></section>
 <section id="songs"><div class="wrap"><div class="eyebrow">The track list</div><h2>INSERT TAPE 1</h2><div class="grid"><article class="card"><div class="tape">TRACK 01</div><h3>MELANCHOLY</h3><p>Story Mode</p></article><article class="card"><div class="tape">TRACK 02</div><h3>TWISTED</h3><p>Story Mode</p></article><article class="card"><div class="tape">TRACK 03</div><h3>LUNACY</h3><p>Story Mode</p></article></div><p><strong>Bonus:</strong> SMILE is available through Freeplay in the project.</p></div></section>
@@ -58,6 +88,7 @@ footer{background:#0b0908;border-top:3px solid #ad3b2e}
 <section id="credits"><div class="wrap"><div class="eyebrow">Acknowledgements</div><h2>BUILT WITH RESPECT FOR THE ORIGINAL</h2><p>This is an unofficial, community-created iOS adaptation. Original mod creators and contributors retain credit for their respective work. The Rookies Team created the original mod. Directors: Delight (Scott), Choccy, and The Hall Monitor. Artists: Delight (Scott), FadoraDude, NotQuba, Choccy, Worm, Sonicth1991, and Skylar Film Studios. Composers: JPRxml and Silenced-Star, with additional credited contributors. Original team credits and permission to distribute original assets must be verified before publishing game content. This is not an official Rookies Team publication.</p><p>This website is not affiliated with the original game's rights holders.</p></div></section></main>
 <footer><div class="wrap"><small>Sunday Night Suicide: Rookies Edition V1 — unofficial iOS port project · <a href="https://github.com/MrAdams76/SNS-Rookies-iOS-Website">GitHub</a></small></div></footer>
 <script>
+(()=>{const toggle=document.querySelector(".mobile-menu-toggle"),links=document.getElementById("site-links");if(!toggle||!links)return;toggle.addEventListener("click",()=>{const open=links.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));toggle.textContent=open?"✕ Close":"☰ Menu"});links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰ Menu"}));document.addEventListener("keydown",e=>{if(e.key==="Escape"){links.classList.remove("open");toggle.setAttribute("aria-expanded","false");toggle.textContent="☰ Menu"}})})();
 
 (()=>{
 const frames=[
